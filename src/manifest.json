@@ -2,13 +2,23 @@
   "manifest_version": 2,
   "name": "GitHub File Icon",
   "author": "xxhomey19",
+  "applications": {
+    "gecko": {
+      "id": "{85860b32-02a8-431a-b2b1-40fbd64c9c69}"
+    }
+  },
   "background": {
-    "page": "background.html",
-    "persistent": false
+    "page": "background.html"
   },
   "content_scripts": [
     {
-      "matches": ["https://github.com/*", "https://gitlab.com/*", "https://bitbucket.org/*", "https://*.gogs.io/*", "https://*.gitea.io/*"],
+      "matches": [
+        "https://github.com/*",
+        "https://gitlab.com/*",
+        "https://bitbucket.org/*",
+        "https://*.gogs.io/*",
+        "https://*.gitea.io/*"
+      ],
       "js": ["contentscript.bundle.js"],
       "css": ["contentscript.css"]
     }
